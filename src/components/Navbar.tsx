@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <header className="w-full pl-6 pr-6 bg-black ">
       <div className="flex justify-between items-center ml-[15%] mr-[15%]">
-        <div className="text-[4rem] font-medium text-purple-prime">
+        <div className="text-[3rem] font-medium text-purple-prime">
           Portfólio
         </div>
         <nav>

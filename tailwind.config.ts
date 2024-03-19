@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         "purple-prime": "#986dff",
       },
+      fontSize: {
+        "title-section": "5rem",
+      },
     },
   },
   plugins: [],
