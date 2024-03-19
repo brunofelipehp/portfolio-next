@@ -4,6 +4,7 @@ import profilePhoto from "../../public/assets/profile-x.jpeg";
 import aboutPhoto from "../../public/assets/Pro.png";
 import project from "../../public/assets/project-watch.jpeg";
 import Link from "next/link";
+import { FaHtml5 } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -175,6 +176,44 @@ export default function Home() {
               </Link>
             </div>
             <div className=" inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-700 transform scale-x-0 group-hover:scale-x-100"></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-title-section text-center mb-7">Tecnologias</h2>
+        <div className="flex justify-center gap-24">
+          <div className="flex flex-wrap justify-center max-w-[31.3rem] gap-3">
+            <div className="grid place-content-center w-32 h-32 rounded-xl mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl  mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl  mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl  mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+            <div className="grid place-content-center w-32 h-32 rounded-xl  mb-3 bg-[#151515] hover:border-purple-prime hover:border">
+              <FaHtml5 size="5rem" color="#986dff" />
+            </div>
+          </div>
+
+          <div className="w-[3.125rem] h-[25rem] rounded-xl text-center">
+            <h3 className="w-8 font-bold transition-all duration-300 ease-in">
+              Titulo
+            </h3>
+            <p className="opacity-70 transition-all duration-300 ease-in">
+              Texto
+            </p>
           </div>
         </div>
       </section>
