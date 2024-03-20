@@ -5,7 +5,7 @@ interface IconData {
   text: string;
 }
 
-export const icons: IconData[] = [
+export const iconsData: IconData[] = [
   {
     id: 1,
     icon: "FaHtml5",
