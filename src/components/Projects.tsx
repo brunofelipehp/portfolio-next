@@ -7,15 +7,15 @@ export default function Projects() {
   console.log();
 
   return (
-    <section>
-      <h2 className="text-4xl md:text-title-section text-center mb-7">
+    <section id="projects">
+      <h2 className="text-4xl mb-7 md:text-title-section text-center sm:mb-24">
         Projetos
       </h2>
       <div className="md:grid md:grid-cols-3 md:gap-x-24">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="w-80 h-60 grid place-content-center text-center rounded-t-xl relative transform duration-500 ease-in-out hover:transform md:hover:scale-150 md:group"
+            className="w-80 h-60 grid place-content-center text-center rounded-t-xl relative transform duration-500 ease-in-out hover:transform md:hover:scale-150 group"
           >
             <Image
               src={project.url}
@@ -30,7 +30,7 @@ export default function Projects() {
             </p>
             <div className="flex justify-center gap-4">
               <Link
-                className="hidden md:absolute md:top-[65%] md:left-2/4 md:-translate-x-2/4 md:-translate-y-2/4  md:w-1/3 md:text-xs md:bg-purple-prime md:p-1 md:rounded-2xl md:opacity-0 md:cursor-pointer md:transition-all duration-700 md:ease-in-out md:group-hover:opacity-100"
+                className="max-[640px]:hidden  md:absolute md:top-[65%] md:left-2/4 md:-translate-x-2/4 md:-translate-y-2/4  md:w-1/3 md:text-xs md:bg-purple-prime md:p-1 md:rounded-2xl md:opacity-0 md:cursor-pointer md:transition-all md:duration-700 md:ease-in-out md:group-hover:opacity-100"
                 href=""
               >
                 veja mais
@@ -43,7 +43,7 @@ export default function Projects() {
                 veja mais
               </Link>
             </div>
-            <div className=" inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-700 transform scale-x-0 group-hover:scale-x-100"></div>
+            <div className=" md:inset-x-0 md:bottom-0 md:w-full md:h-0.5 md:bg-purple-prime md:transition-all md:duration-700 md:transform md:scale-x-0 md:group-hover:scale-x-100"></div>
           </div>
         ))}
       </div>

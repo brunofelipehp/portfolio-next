@@ -31,8 +31,8 @@ export default function Tecnologies() {
   };
 
   return (
-    <section>
-      <h2 className="text-4xl md:text-title-section text-center mb-7">
+    <section id="techs">
+      <h2 className="text-4xl mb-7 text-center md:text-title-section md:text-center  sm:mb-24">
         Tecnologias
       </h2>
       <div className="flex justify-center gap-24">
@@ -49,7 +49,7 @@ export default function Tecnologies() {
           ))}
         </div>
 
-        <div className="hidden md:w-[31.3rem] md:h-[25rem] md:rounded-xl md:text-center">
+        <div className="hidden md:flex md:flex-col md:w-[31.3rem] md:h-[25rem] md:rounded-xl md:text-center">
           <h3 className=" font-bold transition-all duration-300 ease-in text-center">
             {techTitle}
           </h3>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { MenuMobile } from "./MenuMobile";
 
 export default function Navbar() {
   return (
@@ -47,9 +48,8 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <div className="lg:hidden">
-            <RxHamburgerMenu size={24} />
-          </div>
+
+          <MenuMobile />
         </nav>
       </div>
     </header>

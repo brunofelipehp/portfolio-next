@@ -16,6 +16,12 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -26,8 +32,20 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+#about,
+#projects {
+  opacity: 0;
+  transform: translate(-50px, 0px);
+  transition: 0.3s all ease;
+}
+
+.animar {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
 @layer utilities {
-  .text-balance {
+  /* .text-balance {
     text-wrap: balance;
-  }
+  } */
 }
