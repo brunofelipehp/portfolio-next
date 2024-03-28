@@ -1,13 +1,22 @@
+"use client";
 import { projectData } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = projectData;
   console.log();
 
   return (
-    <section id="projects">
+    <motion.section
+      id="projects"
+      className="origin-center"
+      initial={{ opacity: 0, y: 200, scale: 0.5 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 200, scale: 0.5 }}
+      transition={{ duration: 0.5 }}
+    >
       <h2 className="text-4xl mb-7 md:text-title-section text-center sm:mb-24">
         Projetos
       </h2>
@@ -47,6 +56,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

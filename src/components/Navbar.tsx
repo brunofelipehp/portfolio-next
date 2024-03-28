@@ -1,10 +1,17 @@
+"use client";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MenuMobile } from "./MenuMobile";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <header className="w-full pl-6 pr-6 bg-black ">
+    <motion.header
+      className="w-full pl-6 pr-6 bg-black absolute top-0"
+      initial={{ top: -100 }}
+      animate={{ top: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex justify-between items-center md:ml-[15%] md:mr-[15%]">
         <div className="text-[3rem] font-medium text-purple-prime">
           Portfólio
@@ -52,6 +59,6 @@ export default function Navbar() {
           <MenuMobile />
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 }

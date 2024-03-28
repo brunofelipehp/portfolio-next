@@ -12,7 +12,7 @@ export const handleScrollAnimation = () => {
 
     const documentTop = window.scrollY || document.documentElement.scrollTop;
 
-    const sectionOffset = sectionTop(idSection) + 720;
+    const sectionOffset = sectionTop(idSection) + 120;
 
     if (documentTop > sectionOffset) {
       section.classList.add("animar");
@@ -21,7 +21,7 @@ export const handleScrollAnimation = () => {
     }
   };
 
-  //animateSections("#profile");
+  animateSections("#profile");
   animateSections("#about");
   animateSections("#projects");
   animateSections("#techs");

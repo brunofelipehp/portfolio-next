@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { motion } from "framer-motion";
 
 export function MenuMobile() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -19,8 +20,8 @@ export function MenuMobile() {
   useMenuBodyOverFlow(openMenu);
 
   return (
-    <div className="lg:hidden" onClick={() => handleMenu()}>
-      <div className="text-purple-prime ">
+    <div className="lg:hidden">
+      <div className="text-purple-prime " onClick={() => handleMenu()}>
         {openMenu ? (
           <IoClose size={32} className="text-purple-prime " />
         ) : (
@@ -28,7 +29,10 @@ export function MenuMobile() {
         )}
       </div>
 
-      <nav
+      <motion.nav
+        initial={{ opacity: 0, y: -400 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
         className={`${
           openMenu
             ? "absolute  h-screen  w-full z-50 top-16 left-[0%]   transition-all ease-in backdrop-blur-lg  border-zinc-950 bg-[rgba(27,27,27,0.65)]  duration-500 opacity-90"
@@ -73,7 +77,7 @@ export function MenuMobile() {
             </Link>
           </li>
         </ul>
-      </nav>
+      </motion.nav>
     </div>
   );
 }
