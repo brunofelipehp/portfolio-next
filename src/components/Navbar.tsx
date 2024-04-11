@@ -17,7 +17,7 @@ export default function Navbar() {
           Portfólio
         </div>
         <nav className="flex gap-8">
-          <ul className="hidden lg:flex lg:items-center lg:gap-[3rem] lg:list-none ">
+          <ul className="hidden xl:flex xl:items-center xl:gap-[3rem] xl:list-none ">
             <li className="text-decoration-none">
               <Link
                 className="relative inline-block cursor-pointer hover:text-purple-prime transition-all duration-500 group"

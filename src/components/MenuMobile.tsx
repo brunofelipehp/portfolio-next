@@ -20,7 +20,7 @@ export function MenuMobile() {
   useMenuBodyOverFlow(openMenu);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <div className="text-purple-prime " onClick={() => handleMenu()}>
         {openMenu ? (
           <IoClose size={32} className="text-purple-prime " />
@@ -30,8 +30,9 @@ export function MenuMobile() {
       </div>
 
       <motion.nav
-        initial={{ opacity: 0, y: -400 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -400 }}
+        animate={{}}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className={`${
           openMenu
@@ -40,7 +41,13 @@ export function MenuMobile() {
         }`}
       >
         <ul className="flex flex-col  h-screen items-center mt-32 text-[2rem]   list-none">
-          <li className="text-decoration-none text-white font-bold border-b  p-5">
+          <motion.li
+            initial={{ opacity: 0, x: -200 }}
+            animate={{}}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-decoration-none text-white font-bold p-5"
+          >
             <Link
               className="relative  ml-4 inline-block cursor-pointer hover:text-purple-prime transition-all duration-500 group"
               href="/"
@@ -48,8 +55,14 @@ export function MenuMobile() {
               Home
               <div className="absolute inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-500 transform scale-x-0 group-hover:scale-x-100"></div>
             </Link>
-          </li>
-          <li className="text-decoration-none text-white font-bold border-b  p-5">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, x: -200 }}
+            animate={{}}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-decoration-none text-white font-bold p-5"
+          >
             <Link
               className="relative ml-4 inline-block cursor-pointer hover:text-purple-prime transition-all duration-500 group"
               href="/"
@@ -57,8 +70,14 @@ export function MenuMobile() {
               Sobre
               <div className="absolute inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-500 transform scale-x-0 group-hover:scale-x-100"></div>
             </Link>
-          </li>
-          <li className="text-decoration-none text-white font-bold border-b  p-5">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, x: -200 }}
+            animate={{}}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-decoration-none text-white font-bold p-5"
+          >
             <Link
               className="relative ml-4 inline-block cursor-pointer hover:text-purple-prime transition-all duration-500 group"
               href="/"
@@ -66,8 +85,14 @@ export function MenuMobile() {
               Projetos
               <div className="absolute inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-500 transform scale-x-0 group-hover:scale-x-100"></div>
             </Link>
-          </li>
-          <li className="text-decoration-none text-white font-bold border-b p-5">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, x: -200 }}
+            animate={{}}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-decoration-none text-white font-bold  p-5"
+          >
             <Link
               className="relative ml-4 inline-block cursor-pointer hover:text-purple-prime transition-all duration-500 group"
               href="/"
@@ -75,7 +100,7 @@ export function MenuMobile() {
               Tecnologias
               <div className="absolute inset-x-0 bottom-0 w-full h-0.5 bg-purple-prime transition-all duration-500 transform scale-x-0 group-hover:scale-x-100"></div>
             </Link>
-          </li>
+          </motion.li>
         </ul>
       </motion.nav>
     </div>

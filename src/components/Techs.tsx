@@ -88,7 +88,7 @@ export default function Tecnologies() {
         </motion.div>
 
         <motion.div
-          className="hidden md:flex md:flex-col md:w-[31.3rem] md:h-[25rem] md:rounded-xl md:text-center"
+          className="hidden xl:flex xl:flex-col xl:w-[31.3rem] xl:h-[25rem] xl:rounded-xl xl:text-center"
           initial={{ opacity: 0, x: +200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
