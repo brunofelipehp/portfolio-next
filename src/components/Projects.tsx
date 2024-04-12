@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import ModalProjects from "./ModalProjects";
 
 export default function Projects() {
   const [moreInfo, setMoreInfo] = useState<boolean>(false);
@@ -29,36 +30,7 @@ export default function Projects() {
       transition={{ duration: 0.5 }}
       onClick={() => (moreInfo ? handleBox() : "")}
     >
-      <div
-        className={`${
-          moreInfo ? "fixed inset-0 z-50 flex  bg-back-modal " : "hidden"
-        }`}
-      >
-        <div className="fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-2/5 max-h-fit bg-zinc-800 rounded-lg p-5">
-          <div className="flex justify-between">
-            <h2> Titulo do Projeto</h2>
-            <IoClose
-              size={32}
-              className="text-purple-prime "
-              onClick={() => handleBox()}
-            />
-          </div>
-
-          <Image
-            src={"/assets/project-watch.jpeg"}
-            alt="Foto sobre"
-            width={200}
-            height={200}
-          />
-          <p>Construindo um relógio usando html, css e javascript</p>
-          <div className="flex gap-3">
-            <Link href="brunofelipehp.github.io/watch/" passHref={true}>
-              Projeto
-            </Link>
-            <Link href={"github.com/brunofelipehp/watch"}>Repositorio</Link>
-          </div>
-        </div>
-      </div>
+      <ModalProjects moreInfo={moreInfo} />
       <h2 className="text-4xl mb-7 md:text-title-section text-center sm:mb-24">
         Projetos
       </h2>
