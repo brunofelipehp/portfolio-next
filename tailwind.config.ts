@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "purple-prime": "#986dff",
+        "back-modal": "rgb(0, 0, 0, 0.7)",
       },
       fontSize: {
         "title-section": "5rem",
