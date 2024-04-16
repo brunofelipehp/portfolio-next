@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ProviderModal } from "@/components/ProviderModal";
 
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={poppins.className}>
-        <Navbar />
-        {children}
+        <ProviderModal>
+          <Navbar />
+          {children}
+        </ProviderModal>
       </body>
     </html>
   );

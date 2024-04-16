@@ -1,22 +1,22 @@
 "use client";
 import { projectData } from "@/utils/projects";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
 import ModalProjects from "./ModalProjects";
+import { useModalContext } from "@/context/ModalProjectContext.";
 
 export default function Projects() {
   const [moreInfo, setMoreInfo] = useState<boolean>(false);
+  const { openModal, setOpenModal } = useModalContext();
   const projects = projectData;
   console.log();
 
   const handleBox = () => {
-    if (!moreInfo) {
-      setMoreInfo(true);
+    if (!openModal) {
+      setOpenModal(true);
     } else {
-      setMoreInfo(false);
+      setOpenModal(false);
     }
   };
 
@@ -28,7 +28,6 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 200, scale: 0.5 }}
       transition={{ duration: 0.5 }}
-      onClick={() => (moreInfo ? handleBox() : "")}
     >
       <ModalProjects moreInfo={moreInfo} />
       <h2 className="text-4xl mb-7 md:text-title-section text-center sm:mb-24">
