@@ -3,17 +3,11 @@ import { useModalContext } from "@/context/ModalProjectContext.";
 import { useMenuBodyOverFlow } from "@/hooks/useMenuBodyOverflow";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { LuScreenShare } from "react-icons/lu";
 
-interface ModalProps {
-  moreInfo: boolean;
-}
-
-export default function ModalProjects({ moreInfo }: ModalProps) {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
+export default function ModalProjects() {
   const { openModal, setOpenModal } = useModalContext();
 
   function handleModal() {
@@ -32,7 +26,7 @@ export default function ModalProjects({ moreInfo }: ModalProps) {
         openModal ? "fixed inset-0 z-50 flex  bg-back-modal" : "hidden"
       }`}
     >
-      <div className="fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-2/3 h-96  bg-zinc-800 rounded-lg p-5">
+      <div className="fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-2/3 max-h-fit xl:h-[25rem]  bg-zinc-800 rounded-lg p-8  transition-all duration-500 ease-out">
         <div className="flex justify-end">
           <IoClose
             size={32}
@@ -41,13 +35,13 @@ export default function ModalProjects({ moreInfo }: ModalProps) {
           />
         </div>
 
-        <div className=" flex  justify-around mt-5 gap-5">
+        <div className=" flex flex-wrap justify-center xl:flex-nowrap  xl:justify-around mt-5 gap-5">
           <Image
-            className="w-[30rem] rounded-lg"
+            className="w-[30rem]  rounded-lg"
             src={"/assets/project-watch.jpeg"}
             alt="Foto sobre"
             width={200}
-            height={200}
+            height={500}
           />
           <div className="flex flex-col text-center mt-2">
             <div className="grid gap-3 mb-8">

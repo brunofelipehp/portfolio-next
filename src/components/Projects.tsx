@@ -29,7 +29,7 @@ export default function Projects() {
       exit={{ opacity: 0, y: 200, scale: 0.5 }}
       transition={{ duration: 0.5 }}
     >
-      <ModalProjects moreInfo={moreInfo} />
+      <ModalProjects />
       <h2 className="text-4xl mb-7 md:text-title-section text-center sm:mb-24">
         Projetos
       </h2>
